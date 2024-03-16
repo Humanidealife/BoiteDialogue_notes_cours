@@ -34,7 +34,7 @@
             // 
             // Button1
             // 
-            this.Button1.Location = new System.Drawing.Point(268, 312);
+            this.Button1.Location = new System.Drawing.Point(321, 313);
             this.Button1.Name = "Button1";
             this.Button1.Size = new System.Drawing.Size(151, 70);
             this.Button1.TabIndex = 0;
@@ -45,9 +45,9 @@
             // Label1
             // 
             this.Label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label1.Location = new System.Drawing.Point(227, 161);
+            this.Label1.Location = new System.Drawing.Point(223, 160);
             this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(232, 67);
+            this.Label1.Size = new System.Drawing.Size(358, 72);
             this.Label1.TabIndex = 1;
             this.Label1.Text = "label1";
             this.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
