@@ -16,5 +16,23 @@ namespace BoiteDialogue_notes_cours
         {
             InitializeComponent();
         }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            DialogResult resultat;
+            resultat = MessageBox.Show("Voulez-vous quitter le programme ?",
+                "Quitter le programme",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning);
+            if(resultat == DialogResult.Yes)
+            {
+                //Application.Exit();
+                Label1.Text = "Vous avez choisi 'Oui'";       
+            }
+            else
+            {
+                Label1.Text = "Vous avez choisi'Non'";
+            }
+        }
     }
 }

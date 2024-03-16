@@ -28,13 +28,47 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.Button1 = new System.Windows.Forms.Button();
+            this.Label1 = new System.Windows.Forms.Label();
+            this.SuspendLayout();
+            // 
+            // Button1
+            // 
+            this.Button1.Location = new System.Drawing.Point(268, 312);
+            this.Button1.Name = "Button1";
+            this.Button1.Size = new System.Drawing.Size(151, 70);
+            this.Button1.TabIndex = 0;
+            this.Button1.Text = "button1";
+            this.Button1.UseVisualStyleBackColor = true;
+            this.Button1.Click += new System.EventHandler(this.Button1_Click);
+            // 
+            // Label1
+            // 
+            this.Label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label1.Location = new System.Drawing.Point(227, 161);
+            this.Label1.Name = "Label1";
+            this.Label1.Size = new System.Drawing.Size(232, 67);
+            this.Label1.TabIndex = 1;
+            this.Label1.Text = "label1";
+            this.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Label1);
+            this.Controls.Add(this.Button1);
+            this.Name = "Form1";
             this.Text = "Form1";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button Button1;
+        private System.Windows.Forms.Label Label1;
     }
 }
 
