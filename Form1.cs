@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace BoiteDialogue_notes_cours
 {
@@ -61,6 +62,32 @@ namespace BoiteDialogue_notes_cours
                 button1.ForeColor = colorDialog1.Color;
                 MessageBox.Show(colorDialog1.Color.ToString());
             }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            var fileContent = string.Empty;
+            var filePath = string.Empty;
+
+            openFileDialog1.InitialDirectory = Environment.SpecialFolder.MyDocuments.ToString();
+            openFileDialog1.Filter = "txt files (*.txt)|*.txt|all files(*.*)|*.*";
+            openFileDialog1.FilterIndex = 1;
+            openFileDialog1.Title = "Choisir un fichier en format txt";
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                filePath = openFileDialog1.FileName;
+                textBox2.Text = filePath;
+            }
+
+            var fileStream = openFileDialog1.OpenFile();
+            
+            using(StreamReader reader = new StreamReader(fileStream))
+            {
+                fileContent = reader.ReadToEnd();
+            }
+
+            textBox1.Text = fileContent;
         }
     }
 }
