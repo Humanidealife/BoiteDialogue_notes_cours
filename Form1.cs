@@ -34,5 +34,22 @@ namespace BoiteDialogue_notes_cours
                 Label1.Text = "Vous avez choisi'Non'";
             }
         }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            if (FontDialog1.ShowDialog() != DialogResult.Cancel)
+            {
+                Label2.Font = FontDialog1.Font;
+
+                string maFont = "size : " + FontDialog1.Font.Size +
+                    "\nbold : " + FontDialog1.Font.Bold +
+                    "\nItalic : " + FontDialog1.Font.Italic +
+                    "\nName : " + FontDialog1.Font.Name;
+
+                MessageBox.Show(maFont);
+                MessageBox.Show(FontDialog1.Color.ToString());
+
+            }
+        }
     }
 }
