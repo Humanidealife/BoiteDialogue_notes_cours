@@ -89,5 +89,24 @@ namespace BoiteDialogue_notes_cours
 
             textBox1.Text = fileContent;
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            var fileContent = string.Empty;
+            var filePath = string.Empty;
+
+            openFileDialog1.InitialDirectory = Environment.SpecialFolder.MyDocuments.ToString();
+            openFileDialog1.Filter = "png files (*.pg)|*.png|all files(*.*)|*.*";
+            openFileDialog1.FilterIndex = 1;
+            openFileDialog1.Title = "Choisir une image en format png";
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                filePath = openFileDialog1.FileName;
+                textBox3.Text = filePath;
+            }
+
+            pictureBox1.Load(filePath);
+        }
     }
 }
