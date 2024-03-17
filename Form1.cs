@@ -17,7 +17,7 @@ namespace BoiteDialogue_notes_cours
             InitializeComponent();
         }
 
-        private void Button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             DialogResult resultat;
             resultat = MessageBox.Show("Voulez-vous quitter le programme ?",
@@ -27,19 +27,19 @@ namespace BoiteDialogue_notes_cours
             if(resultat == DialogResult.Yes)
             {
                 //Application.Exit();
-                Label1.Text = "Vous avez choisi 'Oui'";       
+                label1.Text = "Vous avez choisi 'Oui'";       
             }
             else
             {
-                Label1.Text = "Vous avez choisi'Non'";
+                label1.Text = "Vous avez choisi'Non'";
             }
         }
 
-        private void Button2_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
             if (FontDialog1.ShowDialog() != DialogResult.Cancel)
             {
-                Label2.Font = FontDialog1.Font;
+                label2.Font = FontDialog1.Font;
 
                 string maFont = "size : " + FontDialog1.Font.Size +
                     "\nbold : " + FontDialog1.Font.Bold +
@@ -49,6 +49,17 @@ namespace BoiteDialogue_notes_cours
                 MessageBox.Show(maFont);
                 MessageBox.Show(FontDialog1.Color.ToString());
 
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if(colorDialog1.ShowDialog() != DialogResult.Cancel)
+            {
+                //Label2.ForeColor = colorDialog1.Color;
+                label2.BackColor = colorDialog1.Color;
+                button1.ForeColor = colorDialog1.Color;
+                MessageBox.Show(colorDialog1.Color.ToString());
             }
         }
     }
