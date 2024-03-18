@@ -193,5 +193,13 @@ namespace BoiteDialogue_notes_cours
                 printDocument1.Print();
             }
         }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            if (pageSetupDialog1.ShowDialog() == DialogResult.OK)
+            {
+                printDocument1.Print();
+            }
+        }
     }
 }
