@@ -185,5 +185,13 @@ namespace BoiteDialogue_notes_cours
                 printPreviewDialog1.Close();
             }
         }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            if(printDialog1.ShowDialog() == DialogResult.OK)
+            {
+                printDocument1.Print();
+            }
+        }
     }
 }
