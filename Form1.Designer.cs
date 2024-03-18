@@ -45,6 +45,9 @@
             this.button6 = new System.Windows.Forms.Button();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.button7 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -179,12 +182,34 @@
             this.textBox4.Size = new System.Drawing.Size(610, 369);
             this.textBox4.TabIndex = 12;
             // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(665, 953);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(237, 36);
+            this.button7.TabIndex = 13;
+            this.button7.Text = "Sélection d\'un chemin";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(687, 629);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(79, 29);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "label3";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1196, 1055);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.button7);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
@@ -225,6 +250,9 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
     }
 }
 

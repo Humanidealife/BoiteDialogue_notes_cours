@@ -142,5 +142,18 @@ namespace BoiteDialogue_notes_cours
                 
             }*/
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            //folderBrowserDialog1.ShowDialog();
+            folderBrowserDialog1.Description = "Ceci est une description";
+            folderBrowserDialog1.RootFolder = Environment.SpecialFolder.MyComputer;
+            folderBrowserDialog1.ShowNewFolderButton = false;
+            if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
+            {
+                
+                label3.Text = folderBrowserDialog1.SelectedPath;
+            }
+        }
     }
 }
