@@ -176,5 +176,14 @@ namespace BoiteDialogue_notes_cours
             e.Graphics.DrawImage(pictureBox2.Image, 100, 300, 517, 272);
 
         }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            if (printPreviewDialog1.ShowDialog() == DialogResult.OK)
+            {
+                printDocument1.Print();
+                printPreviewDialog1.Close();
+            }
+        }
     }
 }
