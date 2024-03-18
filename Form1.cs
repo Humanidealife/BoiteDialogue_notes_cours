@@ -163,11 +163,18 @@ namespace BoiteDialogue_notes_cours
 
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
+            //Impression du texte en pdf
             Font myFont = new Font("Arail", 14, FontStyle.Bold);
             e.Graphics.DrawString(textBox5.Text, 
                 myFont, 
                 Brushes.Aquamarine,
                 new PointF(100, 100));
+            //Impression d'image
+            // Image n'est pas centrée
+            //e.Graphics.DrawImage(pictureBox2.Image, new PointF(100, 300));
+            //une autre façon de faire
+            e.Graphics.DrawImage(pictureBox2.Image, 100, 300, 517, 272);
+
         }
     }
 }
