@@ -60,6 +60,7 @@
             this.printPreviewDialog2 = new System.Windows.Forms.PrintPreviewDialog();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
+            this.printPreviewControl1 = new System.Windows.Forms.PrintPreviewControl();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -178,7 +179,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(445, 995);
+            this.button6.Location = new System.Drawing.Point(18, 986);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(183, 48);
             this.button6.TabIndex = 11;
@@ -192,7 +193,7 @@
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
             this.textBox4.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox4.Size = new System.Drawing.Size(610, 369);
+            this.textBox4.Size = new System.Drawing.Size(370, 239);
             this.textBox4.TabIndex = 12;
             // 
             // button7
@@ -306,12 +307,22 @@
             // 
             this.pageSetupDialog1.Document = this.printDocument1;
             // 
+            // printPreviewControl1
+            // 
+            this.printPreviewControl1.Document = this.printDocument1;
+            this.printPreviewControl1.Location = new System.Drawing.Point(412, 663);
+            this.printPreviewControl1.Name = "printPreviewControl1";
+            this.printPreviewControl1.Size = new System.Drawing.Size(202, 231);
+            this.printPreviewControl1.TabIndex = 21;
+            this.printPreviewControl1.Zoom = 0.14713430282292558D;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1196, 1055);
+            this.Controls.Add(this.printPreviewControl1);
             this.Controls.Add(this.button11);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.button9);
@@ -375,6 +386,7 @@
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog2;
         private System.Windows.Forms.PrintDialog printDialog1;
         private System.Windows.Forms.PageSetupDialog pageSetupDialog1;
+        private System.Windows.Forms.PrintPreviewControl printPreviewControl1;
     }
 }
 

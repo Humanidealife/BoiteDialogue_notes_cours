@@ -198,7 +198,8 @@ namespace BoiteDialogue_notes_cours
         {
             if (pageSetupDialog1.ShowDialog() == DialogResult.OK)
             {
-                printDocument1.Print();
+                printPreviewControl1.InvalidatePreview();
+                //printDocument1.Print();
             }
         }
     }
