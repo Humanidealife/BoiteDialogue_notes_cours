@@ -111,6 +111,7 @@ namespace BoiteDialogue_notes_cours
 
         private void button6_Click(object sender, EventArgs e)
         {
+            //Enregistrer un fichier texte sur le bureau
             saveFileDialog1.Filter = "Fichier texte (*.txt)|*.txt|Tous les fichiers (*.*)|*.*";
             saveFileDialog1.Title = "Enregistrer un fichier texte";
             saveFileDialog1.ShowDialog();
@@ -121,6 +122,25 @@ namespace BoiteDialogue_notes_cours
                 sw.Write(textBox4.Text);
                 sw.Close();
             }
+
+            /*saveFileDialog1.Filter = "Fichier texte (*.txt)|*.txt|Fichier pdf (*.pdf)|*.pdf";
+            saveFileDialog1.Title = "Enregistrer un fichier texte";
+            saveFileDialog1.ShowDialog();
+
+            if (saveFileDialog1.FileName != "")
+            {
+                switch (saveFileDialog1.FilterIndex)
+                {
+                    case 1:
+                        MessageBox.Show("Vous avez choisi le format txt");
+                        break;
+
+                    case 2:
+                        MessageBox.Show("Vous avez choisi le format pdf");
+                        break;
+                }
+                
+            }*/
         }
     }
 }
