@@ -108,5 +108,19 @@ namespace BoiteDialogue_notes_cours
 
             pictureBox1.Load(filePath);
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            saveFileDialog1.Filter = "Fichier texte (*.txt)|*.txt|Tous les fichiers (*.*)|*.*";
+            saveFileDialog1.Title = "Enregistrer un fichier texte";
+            saveFileDialog1.ShowDialog();
+
+            if (saveFileDialog1.FileName !="")
+            {
+                StreamWriter sw = new StreamWriter(saveFileDialog1.FileName);
+                sw.Write(textBox4.Text);
+                sw.Close();
+            }
+        }
     }
 }
