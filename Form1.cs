@@ -155,5 +155,19 @@ namespace BoiteDialogue_notes_cours
                 label3.Text = folderBrowserDialog1.SelectedPath;
             }
         }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            printDocument1.Print();
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            Font myFont = new Font("Arail", 14, FontStyle.Bold);
+            e.Graphics.DrawString(textBox5.Text, 
+                myFont, 
+                Brushes.Aquamarine,
+                new PointF(100, 100));
+        }
     }
 }
